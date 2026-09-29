@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+langgraph
+langchain
+langchain-core
+langchain-groq
+langchain-mcp-adapters
+mcp
+sqlalchemy
+psycopg2-binary
+pandas
+python-dotenv
+pydantic
+requests
+streamlit
