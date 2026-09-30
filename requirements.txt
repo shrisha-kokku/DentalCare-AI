@@ -4,8 +4,6 @@ langgraph
 langchain
 langchain-core
 langchain-groq
-langchain-mcp-adapters
-mcp
 sqlalchemy
 psycopg2-binary
 pandas
@@ -13,3 +11,28 @@ python-dotenv
 pydantic
 requests
 streamlit
+google-auth-oauthlib
+google-api-python-client
+
+
+# Run Commands
+
+# Terminal 1
+# uvicorn app.main:app --reload
+
+# Terminal 2
+# streamlit run ui/streamlit_app.py
+
+
+
+
+
+# Few Test Data
+
+# Show available slots for an orthodontist
+
+# Book patient 1000082 with Emily Johnson on 5/10/2026 9:00
+
+# Cancel my appointment on 5/10/2026 at 9:00
+
+# Reschedule patient 1000082 from 5/10/2026 9:00 to 5/12/2026 10:00

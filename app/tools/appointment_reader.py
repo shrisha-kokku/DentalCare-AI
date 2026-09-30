@@ -24,7 +24,7 @@ def get_available_slots(specialization: str = "", doctor_name: str = "", date_fi
             pass
     rows = query.limit(20).all()
     session.close()
-    return [{"date_slot": a.date_slot.strftime("%-m/%-d/%Y %-H:%M"), "specialization": d.specialization, "doctor_name": d.name} for a, d in rows]
+    return [{"date_slot": a.date_slot.strftime("%m/%d/%Y %H:%M"), "specialization": d.specialization, "doctor_name": d.name} for a, d in rows]
 
 
 @tool
@@ -33,7 +33,7 @@ def get_patient_appointments(patient_id: str) -> list:
     session = SessionLocal()
     rows = session.query(Appointment, Doctor).join(Doctor).filter(Appointment.patient_id == str(patient_id).strip()).all()
     session.close()
-    return [{"date_slot": a.date_slot.strftime("%-m/%-d/%Y %-H:%M"), "specialization": d.specialization, "doctor_name": d.name, "patient_id": a.patient_id} for a, d in rows]
+    return [{"date_slot": a.date_slot.strftime("%m/%d/%Y %H:%M"), "specialization": d.specialization, "doctor_name": d.name, "patient_id": a.patient_id} for a, d in rows]
 
 
 @tool

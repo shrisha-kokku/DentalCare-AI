@@ -18,3 +18,4 @@ class Appointment(Base):
     date_slot = Column(DateTime, nullable=False)
     is_available = Column(Boolean, default=True, nullable=False)
     patient_id = Column(String, nullable=True)
+    calendar_event_id = Column(String, nullable=True)   
